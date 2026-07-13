@@ -21,14 +21,17 @@
     <style>
         body { font-family: 'Montserrat', sans-serif; background-color: #0f172a; color: #ffffff; overflow-x: hidden; scroll-behavior: smooth;}
         .gold-text-gradient { background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-bg { background: radial-gradient(circle at center, rgba(4, 120, 87, 0.4) 0%, rgba(15, 23, 42, 1) 70%); }
+        
+        .hero-banner { 
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(4, 120, 87, 0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop') center/cover no-repeat fixed; 
+        }
+        
         .glass-card { background: rgba(31, 41, 55, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(212, 175, 55, 0.15); transition: all 0.4s ease; }
         .glass-card:hover { transform: translateY(-5px); border-color: rgba(212, 175, 55, 0.6); box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
         .reveal { opacity: 0; transform: translateY(30px); animation: fadeInUp 1s forwards; }
         @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
         .delay-1 { animation-delay: 0.2s; } .delay-2 { animation-delay: 0.4s; } .delay-3 { animation-delay: 0.6s; }
         
-        /* Floating Robot Animation */
         .float-bot { animation: float 4s ease-in-out infinite; }
         @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
     </style>
@@ -36,41 +39,32 @@
 <body class="antialiased selection:bg-npa-gold selection:text-npa-black">
 
     <!-- HERO SECTION -->
-    <header class="relative min-h-screen flex items-center justify-center text-center px-5 hero-bg overflow-hidden pt-10">
-        <!-- Dekorasi Ornamen -->
-        <div class="absolute top-1/4 left-10 w-72 h-72 bg-npa-emerald rounded-full mix-blend-screen filter blur-[100px] opacity-30"></div>
-        <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-npa-gold rounded-full mix-blend-screen filter blur-[120px] opacity-20"></div>
-        
+    <header class="relative min-h-screen flex items-center justify-center text-center px-5 hero-banner overflow-hidden pt-10">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 mix-blend-overlay pointer-events-none"></div>
         <div class="relative z-10 max-w-5xl mx-auto reveal">
-            <!-- LOGO NPA SMART SYSTEM -->
-            <img src="https://i.postimg.cc/KvvYWXTK/file-00000000f12872089811b818d34255da.png" alt="Logo NPA Smart System" class="h-32 md:h-48 mx-auto mb-6 drop-shadow-[0_0_25px_rgba(212,175,55,0.4)]">
-            
-            <span class="inline-block py-1 px-4 rounded-full border border-npa-gold/50 text-npa-gold text-xs tracking-[0.2em] uppercase mb-6 backdrop-blur-sm">
+            <span class="inline-block py-1 px-4 rounded-full border border-npa-gold/50 text-npa-gold text-xs tracking-[0.2em] uppercase mb-6 backdrop-blur-sm bg-black/30">
                 Eksklusif Lintas Jaringan 3iReborn
             </span>
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-6 drop-shadow-2xl">
                 Apa Sih <br>
                 <span class="gold-text-gradient">NPA Smart System?</span>
             </h1>
-            <p class="text-lg md:text-2xl text-gray-300 font-light max-w-3xl mx-auto leading-relaxed mb-10 italic">
+            <p class="text-lg md:text-2xl text-gray-200 font-light max-w-3xl mx-auto leading-relaxed mb-10 italic drop-shadow-md">
                 "Bukan sekadar Support System biasa. Ini adalah Ekosistem Bisnis Digital bertenaga AI yang mendobrak batas."
             </p>
-            <a href="#filosofi" class="inline-block bg-gradient-to-r from-npa-gold to-yellow-600 text-npa-black font-bold px-10 py-4 rounded-full shadow-[0_0_30px_rgba(212,175,55,0.2)] hover:scale-105 hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] transition duration-300 tracking-wider">
+            <a href="#filosofi" class="inline-block bg-gradient-to-r from-npa-gold to-yellow-600 text-npa-black font-bold px-10 py-4 rounded-full shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:scale-105 hover:shadow-[0_0_40px_rgba(212,175,55,0.6)] transition duration-300 tracking-wider">
                 JELAJAHI EKOSISTEM
             </a>
         </div>
-        
-        <!-- Scroll Indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
             <svg class="w-6 h-6 text-npa-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
         </div>
     </header>
 
-    <!-- SECTION 1: THE MANIFESTO & STORY -->
-    <section id="filosofi" class="py-24 px-5 bg-npa-black relative z-20">
+    <!-- SECTION 1 -->
+    <section id="filosofi" class="py-24 px-5 bg-npa-black relative z-20 border-t-4 border-npa-gold">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="order-2 lg:order-1 reveal delay-1 relative">
-                <!-- FOTO PAKD SUGIARTO BERSAMA ROBOT -->
                 <div class="absolute inset-0 bg-gradient-to-tr from-npa-gold/20 to-transparent rounded-3xl transform -rotate-3 scale-105 -z-10"></div>
                 <img src="https://i.postimg.cc/MKxBKrQq/file-0000000040f0720bb3fc4979c78addca.png" alt="Founder NPA Sugiarto Kurniawan" class="rounded-3xl shadow-[0_0_40px_rgba(212,175,55,0.2)] border border-npa-gold/30 hover:scale-105 transition duration-700 w-full object-cover">
             </div>
@@ -82,7 +76,7 @@
                     <blockquote class="border-l-4 border-npa-gold pl-6 my-6 italic font-serif text-xl text-npa-gold bg-white/5 py-4 pr-4 rounded-r-lg">
                         "Membantu para pensiunan, karyawan, dan pengangguran agar kembali memiliki kemandirian finansial dan penghasilan tetap melalui kendaraan 3iReborn."
                     </blockquote>
-                    <p>Kami percaya, AI tidak diciptakan untuk menggantikan manusia, melainkan hadir untuk mendampingi manusia agar bekerja lebih cerdas. Di sini, tidak ada sekat ego. NPA terbuka bagi siapa saja secara lintas jaringan (cross-network) selama Anda adalah keluarga besar 3iReborn.</p>
+                    <p>Kami percaya, AI tidak diciptakan untuk menggantikan manusia, melainkan hadir untuk mendampingi manusia agar bekerja lebih cerdas.</p>
                 </div>
                 <a href="https://3ireborn.github.io/npa-funnel-magnet/kisah.html" target="_blank" class="mt-8 inline-flex items-center gap-3 text-npa-gold hover:text-white transition font-semibold group">
                     Baca Kisah Sang Founder 
@@ -92,33 +86,28 @@
         </div>
     </section>
 
-    <!-- SECTION 2: THE ECOSYSTEM (CARDS) -->
+    <!-- SECTION 2 -->
     <section class="py-24 px-5 bg-[#121b29] border-t border-b border-gray-800 relative overflow-hidden">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-20 reveal">
                 <p class="text-npa-gold font-bold tracking-widest text-sm uppercase mb-3">Blue Print V5</p>
                 <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Bukan Sekadar Tools.<br>Tetapi Ekosistem.</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto text-lg">Menghubungkan setiap kebutuhan digital Anda dalam satu genggaman cerdas.</p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1: NPA TRI AI MASCOT -->
+                <!-- MASKOT TERPASANG -->
                 <div class="glass-card p-10 rounded-3xl text-center reveal delay-1 border-t-2 border-npa-emerald">
                     <div class="w-28 h-28 mx-auto bg-gradient-to-br from-npa-emerald to-npa-charcoal rounded-full flex items-center justify-center mb-6 shadow-[0_0_25px_rgba(4,120,87,0.5)] border-4 border-npa-emerald/30 float-bot overflow-hidden">
-                        <!-- MASKOT ROBOT NPA TRI AI -->
-                        <!-- Ganti URL di bawah ini dengan link Postimages maskot robot Ndan -->
-                        <img src="https://i.postimg.cc/NM53X49W/file-00000000857c720bbdc46fae9e7aaf8d.png" alt="NPA TRI AI" class="w-full h-full object-cover" onerror="this.src='https://cdn-icons-png.flaticon.com/512/4712/4712035.png'">
+                        <img src="https://i.postimg.cc/5t0zwYxK/file-00000000f3e072079c06835bf73f8eb9.png" alt="NPA TRI AI" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-2xl font-serif font-bold text-npa-emerald mb-4">NPA TRI AI</h3>
                     <p class="text-gray-400 leading-relaxed text-sm">Asisten digital cerdas Anda. Siap membantu membuat naskah promosi, menyusun strategi konten, hingga ide follow-up otomatis.</p>
                 </div>
-                <!-- Card 2 -->
+                <!-- ...sisanya sama... -->
                 <div class="glass-card p-10 rounded-3xl text-center reveal delay-2">
                     <div class="w-20 h-20 mx-auto bg-gradient-to-br from-yellow-600 to-npa-gold rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-lg border border-npa-gold/30">🌐</div>
                     <h3 class="text-2xl font-serif font-bold text-white mb-4">LP Builder Pro</h3>
                     <p class="text-gray-400 leading-relaxed text-sm">Pabrik Landing Page pribadi. Cukup 1 menit, web promosi elegan siap disebar untuk menarik prospek lintas program (Umroh, Pensiun, dll).</p>
                 </div>
-                <!-- Card 3 -->
                 <div class="glass-card p-10 rounded-3xl text-center reveal delay-3">
                     <div class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-600 to-blue-900 rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-lg border border-blue-500/30">🎓</div>
                     <h3 class="text-2xl font-serif font-bold text-white mb-4">The Academy</h3>
@@ -128,42 +117,11 @@
         </div>
     </section>
 
-    <!-- SECTION 3: CORE VALUES -->
-    <section class="py-24 px-5 bg-npa-black">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-4">5 Pilar Nilai NPA</h2>
-                <div class="w-20 h-1 bg-npa-emerald mx-auto mb-8"></div>
-            </div>
-            
-            <div class="flex flex-wrap justify-center gap-4 md:gap-6 reveal delay-1">
-                <div class="px-6 py-4 bg-gray-900 border border-gray-700 rounded-xl hover:border-npa-gold hover:bg-gray-800 transition cursor-default">
-                    <span class="text-2xl mr-2">🤝</span> <span class="font-bold text-white tracking-wide">Membantu</span>
-                </div>
-                <div class="px-6 py-4 bg-gray-900 border border-gray-700 rounded-xl hover:border-npa-gold hover:bg-gray-800 transition cursor-default">
-                    <span class="text-2xl mr-2">📚</span> <span class="font-bold text-white tracking-wide">Belajar</span>
-                </div>
-                <div class="px-6 py-4 bg-gray-900 border border-gray-700 rounded-xl hover:border-npa-gold hover:bg-gray-800 transition cursor-default">
-                    <span class="text-2xl mr-2">🚀</span> <span class="font-bold text-white tracking-wide">Bertumbuh</span>
-                </div>
-                <div class="px-6 py-4 bg-gray-900 border border-gray-700 rounded-xl hover:border-npa-gold hover:bg-gray-800 transition cursor-default">
-                    <span class="text-2xl mr-2">❤️</span> <span class="font-bold text-white tracking-wide">Berbagi</span>
-                </div>
-                <div class="px-6 py-4 bg-gray-900 border border-npa-emerald/50 bg-npa-emerald/10 rounded-xl hover:border-npa-emerald hover:bg-npa-emerald/20 transition cursor-default shadow-[0_0_15px_rgba(4,120,87,0.3)]">
-                    <span class="text-2xl mr-2">🤖</span> <span class="font-bold text-npa-emerald tracking-wide">Berkolaborasi</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- FOOTER / CTA -->
     <footer class="relative py-20 px-5 text-center bg-gradient-to-b from-npa-black to-[#050b14] border-t border-gray-900 overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
         <div class="relative z-10 max-w-3xl mx-auto reveal">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white opacity-5 uppercase tracking-widest absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none">Hajarbleh</h2>
             <h3 class="text-2xl md:text-4xl font-serif font-bold text-white mb-6">Semangat Menembus Batas</h3>
             <p class="text-npa-gold font-medium tracking-widest uppercase mb-12">Bekerja Lebih Cerdas. Bertumbuh Bersama.</p>
-            
             <div class="border-t border-gray-800 pt-8 mt-12 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
                 <p>&copy; 2026 NPA Smart System.</p>
                 <p class="flex items-center gap-2">Powered by <span class="font-bold text-white">NPA TRI AI</span></p>
