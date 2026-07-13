@@ -29,19 +29,22 @@
         .delay-1 { animation-delay: 0.2s; } .delay-2 { animation-delay: 0.4s; } .delay-3 { animation-delay: 0.6s; }
         
         /* Floating Robot Animation */
-        .float-bot { animation: float 6s ease-in-out infinite; }
-        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+        .float-bot { animation: float 4s ease-in-out infinite; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
     </style>
 </head>
 <body class="antialiased selection:bg-npa-gold selection:text-npa-black">
 
     <!-- HERO SECTION -->
-    <header class="relative min-h-screen flex items-center justify-center text-center px-5 hero-bg overflow-hidden">
+    <header class="relative min-h-screen flex items-center justify-center text-center px-5 hero-bg overflow-hidden pt-10">
         <!-- Dekorasi Ornamen -->
         <div class="absolute top-1/4 left-10 w-72 h-72 bg-npa-emerald rounded-full mix-blend-screen filter blur-[100px] opacity-30"></div>
         <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-npa-gold rounded-full mix-blend-screen filter blur-[120px] opacity-20"></div>
         
         <div class="relative z-10 max-w-5xl mx-auto reveal">
+            <!-- LOGO NPA SMART SYSTEM -->
+            <img src="https://i.postimg.cc/KvvYWXTK/file-00000000f12872089811b818d34255da.png" alt="Logo NPA Smart System" class="h-32 md:h-48 mx-auto mb-6 drop-shadow-[0_0_25px_rgba(212,175,55,0.4)]">
+            
             <span class="inline-block py-1 px-4 rounded-full border border-npa-gold/50 text-npa-gold text-xs tracking-[0.2em] uppercase mb-6 backdrop-blur-sm">
                 Eksklusif Lintas Jaringan 3iReborn
             </span>
@@ -67,8 +70,9 @@
     <section id="filosofi" class="py-24 px-5 bg-npa-black relative z-20">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="order-2 lg:order-1 reveal delay-1 relative">
-                <div class="absolute inset-0 bg-gradient-to-tr from-npa-emerald/20 to-transparent rounded-3xl transform -rotate-3 scale-105 -z-10"></div>
-                <img src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1000&auto=format&fit=crop" alt="Kolaborasi Kemanusiaan" class="rounded-3xl shadow-2xl opacity-80 border border-gray-800 mix-blend-luminosity hover:mix-blend-normal transition duration-700">
+                <!-- FOTO PAKD SUGIARTO BERSAMA ROBOT -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-npa-gold/20 to-transparent rounded-3xl transform -rotate-3 scale-105 -z-10"></div>
+                <img src="https://i.postimg.cc/MKxBKrQq/file-0000000040f0720bb3fc4979c78addca.png" alt="Founder NPA Sugiarto Kurniawan" class="rounded-3xl shadow-[0_0_40px_rgba(212,175,55,0.2)] border border-npa-gold/30 hover:scale-105 transition duration-700 w-full object-cover">
             </div>
             <div class="order-1 lg:order-2 reveal delay-2">
                 <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6 text-white leading-tight">Sebuah Misi Kemanusiaan <span class="text-npa-emerald">Berbalut Teknologi.</span></h2>
@@ -98,10 +102,14 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="glass-card p-10 rounded-3xl text-center reveal delay-1">
-                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-npa-emerald to-npa-charcoal rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-lg border border-npa-emerald/30">🤖</div>
-                    <h3 class="text-2xl font-serif font-bold text-white mb-4">NPA TRI AI</h3>
+                <!-- Card 1: NPA TRI AI MASCOT -->
+                <div class="glass-card p-10 rounded-3xl text-center reveal delay-1 border-t-2 border-npa-emerald">
+                    <div class="w-28 h-28 mx-auto bg-gradient-to-br from-npa-emerald to-npa-charcoal rounded-full flex items-center justify-center mb-6 shadow-[0_0_25px_rgba(4,120,87,0.5)] border-4 border-npa-emerald/30 float-bot overflow-hidden">
+                        <!-- MASKOT ROBOT NPA TRI AI -->
+                        <!-- Ganti URL di bawah ini dengan link Postimages maskot robot Ndan -->
+                        <img src="https://i.postimg.cc/NM53X49W/file-00000000857c720bbdc46fae9e7aaf8d.png" alt="NPA TRI AI" class="w-full h-full object-cover" onerror="this.src='https://cdn-icons-png.flaticon.com/512/4712/4712035.png'">
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-npa-emerald mb-4">NPA TRI AI</h3>
                     <p class="text-gray-400 leading-relaxed text-sm">Asisten digital cerdas Anda. Siap membantu membuat naskah promosi, menyusun strategi konten, hingga ide follow-up otomatis.</p>
                 </div>
                 <!-- Card 2 -->
@@ -164,7 +172,6 @@
         </div>
     </footer>
 
-    <!-- Script for scroll animation reveal -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const reveals = document.querySelectorAll(".reveal");
@@ -179,7 +186,7 @@
                 });
             };
             window.addEventListener("scroll", revealOnScroll);
-            revealOnScroll(); // Trigger on load
+            revealOnScroll();
         });
     </script>
 </body>
